@@ -1,6 +1,6 @@
 const app = require('express')();
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
+const http = require('http').createServer(app);
+const io = require('socket.io')(http);
 const PORT = process.env.PORT || 8080;
 
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
