@@ -15,6 +15,10 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log(`User with id ${user.id} disconnected`);
     });
+
+    socket.on('message', () => {
+        console.log(`User with id ${user.id} try to communicate`)
+    })
 });
 
 
